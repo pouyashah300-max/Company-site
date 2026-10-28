@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="خدمات حرفه‌ای شرکت ما">
+  <title>شرکت نوآوران | صفحه اصلی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#home">نوآوران</a>
+
+    <button class="menu-button" id="menuButton"
+      aria-label="باز کردن منو" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="navigation">
+      <a href="#home">خانه</a>
+      <a href="#services">خدمات</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس با ما</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="eyebrow">همراه شما برای پیشرفت</p>
+      <h1>ایده‌های شما، آینده ما</h1>
+      <p>ما به کسب‌وکارها کمک می‌کنیم تا با خدمات
+        حرفه‌ای رشد کنند و به اهداف خود برسند.</p>
+      <a class="button" href="#contact">با ما تماس بگیرید</a>
+    </section>
+
+    <section class="section" id="services">
+      <h2>خدمات ما</h2>
+      <p class="section-intro">راهکارهای مناسب برای رشد کسب‌وکار شما</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>طراحی وب‌سایت</h3>
+          <p>طراحی سایت‌های مدرن، زیبا و سازگار با موبایل.</p>
+        </article>
+        <article class="card">
+          <h3>مشاوره کسب‌وکار</h3>
+          <p>کمک به برنامه‌ریزی و بهبود فعالیت‌های تجاری.</p>
+        </article>
+        <article class="card">
+          <h3>پشتیبانی فنی</h3>
+          <p>راهنمایی برای نگهداری و توسعه خدمات دیجیتال.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>درباره شرکت ما</h2>
+      <p>ما با تمرکز بر کیفیت، خلاقیت و رضایت مشتری،
+        راهکارهایی متناسب با نیاز هر کسب‌وکار ارائه می‌کنیم.</p>
+    </section>
+
+    <section class="section contact" id="contact">
+      <h2>با ما در تماس شوید</h2>
+      <p>برای دریافت اطلاعات بیشتر، پیام خود را بنویسید.</p>
+
+      <form id="contactForm">
+        <label for="name">نام شما</label>
+        <input id="name" name="name" required
+          placeholder="نام خود را وارد کنید">
+
+        <label for="email">ایمیل شما</label>
+        <input id="email" name="email" type="email" required
+          placeholder="example@email.com">
+
+        <label for="message">پیام شما</label>
+        <textarea id="message" name="message" required
+          placeholder="پیام خود را بنویسید"></textarea>
+
+        <button class="button" type="submit">ثبت پیام</button>
+        <p id="formStatus" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© ۲۰۲۶ شرکت نوآوران | تمامی حقوق محفوظ است.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

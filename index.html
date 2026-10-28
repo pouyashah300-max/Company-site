@@ -4,18 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="خدمات حرفه‌ای شرکت ما">
-  <title>شرکت نوآوران | صفحه اصلی</title>
+  <meta name="description" content="شرکت نوآوران، خدمات طراحی وب و مشاوره کسب‌وکار">
+  <title>شرکت نوآوران | راهکارهای حرفه‌ای</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="header">
-    <a class="logo" href="#home">نوآوران</a>
+    <a class="logo" href="#home">نوآوران<span>.</span></a>
 
     <button class="menu-button" id="menuButton"
-      aria-label="باز کردن منو" aria-expanded="false">
-      ☰
-    </button>
+      aria-label="باز کردن منو" aria-expanded="false">☰</button>
 
     <nav id="navigation">
       <a href="#home">خانه</a>
@@ -27,47 +25,79 @@
 
   <main>
     <section class="hero" id="home">
-      <p class="eyebrow">همراه شما برای پیشرفت</p>
-      <h1>ایده‌های شما، آینده ما</h1>
-      <p>ما به کسب‌وکارها کمک می‌کنیم تا با خدمات
-        حرفه‌ای رشد کنند و به اهداف خود برسند.</p>
-      <a class="button" href="#contact">با ما تماس بگیرید</a>
+      <div class="hero-content">
+        <span class="eyebrow">همراه مطمئن کسب‌وکار شما</span>
+        <h1>ایده‌های بزرگ را<br><span>با هم محقق می‌کنیم</span></h1>
+        <p>با راهکارهای نوآورانه، طراحی وب‌سایت و مشاوره حرفه‌ای،
+          کسب‌وکار خود را یک قدم جلوتر ببرید.</p>
+        <div class="hero-actions">
+          <a class="button" href="#contact">شروع همکاری</a>
+          <a class="button button-outline" href="#services">مشاهده خدمات</a>
+        </div>
+      </div>
+
+      <div class="hero-decoration" aria-hidden="true">
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+        <div class="hero-card">
+          <span>راهکارهای هوشمند</span>
+          <strong>رشد، خلاقیت، پیشرفت</strong>
+          <p>آینده کسب‌وکار از امروز شروع می‌شود.</p>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="services">
-      <h2>خدمات ما</h2>
-      <p class="section-intro">راهکارهای مناسب برای رشد کسب‌وکار شما</p>
+      <div class="section-heading">
+        <span class="eyebrow">چه کاری انجام می‌دهیم؟</span>
+        <h2>خدمات ما</h2>
+        <p>راهکارهای متناسب با نیاز کسب‌وکار شما</p>
+      </div>
 
       <div class="cards">
         <article class="card">
+          <div class="service-icon">⌘</div>
           <h3>طراحی وب‌سایت</h3>
-          <p>طراحی سایت‌های مدرن، زیبا و سازگار با موبایل.</p>
+          <p>طراحی سایت‌های مدرن، سریع و سازگار با موبایل.</p>
+          <a href="#contact">اطلاعات بیشتر ←</a>
         </article>
+
         <article class="card">
+          <div class="service-icon">↗</div>
           <h3>مشاوره کسب‌وکار</h3>
-          <p>کمک به برنامه‌ریزی و بهبود فعالیت‌های تجاری.</p>
+          <p>راهکارهایی برای برنامه‌ریزی، توسعه و رشد کسب‌وکار.</p>
+          <a href="#contact">اطلاعات بیشتر ←</a>
         </article>
+
         <article class="card">
+          <div class="service-icon">⚙</div>
           <h3>پشتیبانی فنی</h3>
           <p>راهنمایی برای نگهداری و توسعه خدمات دیجیتال.</p>
+          <a href="#contact">اطلاعات بیشتر ←</a>
         </article>
       </div>
     </section>
 
     <section class="about" id="about">
-      <h2>درباره شرکت ما</h2>
-      <p>ما با تمرکز بر کیفیت، خلاقیت و رضایت مشتری،
-        راهکارهایی متناسب با نیاز هر کسب‌وکار ارائه می‌کنیم.</p>
+      <div class="about-content">
+        <span class="eyebrow">درباره شرکت ما</span>
+        <h2>موفقیت شما، هدف ماست</h2>
+        <p>ما با خلاقیت، کیفیت و توجه به نیاز مشتریان،
+          راهکارهایی کاربردی برای کسب‌وکارها ارائه می‌کنیم.</p>
+        <a class="button" href="#contact">با ما در تماس باشید</a>
+      </div>
     </section>
 
     <section class="section contact" id="contact">
-      <h2>با ما در تماس شوید</h2>
-      <p>برای دریافت اطلاعات بیشتر، پیام خود را بنویسید.</p>
+      <div class="section-heading">
+        <span class="eyebrow">با ما صحبت کنید</span>
+        <h2>تماس با ما</h2>
+        <p>پیام خود را بنویسید تا بتوانیم بهتر راهنمایی‌تان کنیم.</p>
+      </div>
 
       <form id="contactForm">
         <label for="name">نام شما</label>
-        <input id="name" name="name" required
-          placeholder="نام خود را وارد کنید">
+        <input id="name" name="name" required placeholder="نام شما">
 
         <label for="email">ایمیل شما</label>
         <input id="email" name="email" type="email" required
@@ -84,6 +114,8 @@
   </main>
 
   <footer>
+    <a class="logo" href="#home">نوآوران<span>.</span></a>
+    <p>راهکارهای بهتر برای آینده‌ای بهتر</p>
     <p>© ۲۰۲۶ شرکت نوآوران | تمامی حقوق محفوظ است.</p>
   </footer>
 

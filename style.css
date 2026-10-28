@@ -15,34 +15,41 @@ body {
   background: #f8fafc;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
+  min-height: 72px;
+  padding: 12px 7%;
   background: #0f172a;
-  color: white;
-  padding: 14px 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
 .logo {
-  color: #38bdf8;
-  text-decoration: none;
-  font-size: 25px;
+  color: white;
+  font-size: 27px;
   font-weight: bold;
+}
+
+.logo span {
+  color: #38bdf8;
 }
 
 nav {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 25px;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
+  color: #e2e8f0;
 }
 
 nav a:hover {
@@ -51,67 +58,158 @@ nav a:hover {
 
 .menu-button {
   display: none;
-  color: white;
-  background: transparent;
-  border: 1px solid #64748b;
-  border-radius: 6px;
   padding: 5px 12px;
-  font-size: 23px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  font-size: 22px;
   cursor: pointer;
 }
 
 .hero {
-  text-align: center;
-  padding: 100px 20px;
+  min-height: 470px;
+  padding: 75px 8%;
+  background: linear-gradient(120deg, #0f172a, #1d4ed8);
   color: white;
-  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 45px;
+  overflow: hidden;
 }
 
-.hero h1 {
-  font-size: clamp(30px, 5vw, 48px);
-  margin: 8px 0;
-}
-
-.hero > p:not(.eyebrow) {
+.hero-content {
   max-width: 650px;
-  margin: 15px auto 28px;
 }
 
 .eyebrow {
+  display: inline-block;
+  color: #0284c7;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.hero .eyebrow {
   color: #7dd3fc;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.6;
+  margin: 16px 0;
+}
+
+.hero h1 span {
+  color: #7dd3fc;
+}
+
+.hero-content > p {
+  color: #dbeafe;
+  max-width: 560px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
 }
 
 .button {
   display: inline-block;
-  border: 0;
-  border-radius: 8px;
+  padding: 11px 22px;
+  border: none;
+  border-radius: 9px;
   background: #0284c7;
   color: white;
-  padding: 11px 22px;
-  text-decoration: none;
   font: inherit;
   cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
 }
 
 .button:hover {
   background: #0369a1;
+  transform: translateY(-2px);
 }
 
-.section,
-.about {
-  padding: 65px 7%;
+.button-outline {
+  background: transparent;
+  border: 1px solid #93c5fd;
 }
 
-.section h2,
+.button-outline:hover {
+  background: #1e40af;
+}
+
+.hero-decoration {
+  min-height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #93c5fd55;
+}
+
+.circle-one {
+  width: 270px;
+  height: 270px;
+}
+
+.circle-two {
+  width: 210px;
+  height: 210px;
+  background: #38bdf81a;
+}
+
+.hero-card {
+  width: min(310px, 100%);
+  position: relative;
+  padding: 28px;
+  background: #ffffff14;
+  border: 1px solid #ffffff40;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px #02061730;
+}
+
+.hero-card span {
+  color: #7dd3fc;
+  font-size: 14px;
+}
+
+.hero-card strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 22px;
+}
+
+.hero-card p {
+  color: #dbeafe;
+  font-size: 14px;
+}
+
+.section {
+  padding: 75px 7%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2,
 .about h2 {
-  text-align: center;
-  font-size: 28px;
+  font-size: 31px;
+  margin: 8px 0;
 }
 
-.section-intro {
-  text-align: center;
+.section-heading > p {
   color: #64748b;
-  margin-bottom: 30px;
 }
 
 .cards {
@@ -121,30 +219,62 @@ nav a:hover {
 }
 
 .card {
-  padding: 25px;
-  background: white;
+  padding: 28px;
   border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  box-shadow: 0 5px 18px #0f172a0b;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 25px #0f172a08;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px #0f172a12;
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 25px;
 }
 
 .card h3 {
-  color: #0369a1;
+  color: #075985;
+}
+
+.card p {
+  color: #64748b;
+}
+
+.card a {
+  color: #0284c7;
+  font-weight: bold;
 }
 
 .about {
+  padding: 65px 7%;
   text-align: center;
   background: #e0f2fe;
 }
 
-.about p {
+.about-content {
   max-width: 750px;
   margin: auto;
 }
 
+.about p {
+  color: #475569;
+  margin-bottom: 25px;
+}
+
 .contact form {
   max-width: 560px;
-  margin: 25px auto 0;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -153,11 +283,18 @@ nav a:hover {
 .contact input,
 .contact textarea {
   width: 100%;
-  padding: 12px;
+  padding: 13px;
   border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font: inherit;
+  border-radius: 9px;
   background: white;
+  color: #1e293b;
+  font: inherit;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: 2px solid #7dd3fc;
+  border-color: #0284c7;
 }
 
 .contact textarea {
@@ -170,13 +307,17 @@ nav a:hover {
 }
 
 footer {
-  padding: 18px;
-  text-align: center;
-  color: white;
+  padding: 32px 20px;
   background: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
 }
 
-@media (max-width: 700px) {
+footer .logo {
+  display: inline-block;
+}
+
+@media (max-width: 760px) {
   .header {
     flex-wrap: wrap;
   }
@@ -189,6 +330,7 @@ footer {
     display: none;
     width: 100%;
     flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
   }
 
@@ -197,14 +339,24 @@ footer {
   }
 
   nav a {
+    width: 100%;
     padding: 5px 0;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 55px 7%;
+  }
+
+  .hero-decoration {
+    min-height: 240px;
   }
 
   .cards {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    padding: 65px 20px;
+  .section {
+    padding: 55px 7%;
   }
 }
